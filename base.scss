@@ -1,0 +1,55 @@
+/* start of primero */
+
+@use 'minireset';
+
+$namespace : primero;
+$prm : #{$namespace}-;
+
+:root {
+  --#{$prm}blue  : #04b;
+  --#{$prm}green : #0b4;
+  --#{$prm}red   : #b40;
+}
+
+$blue  : var(--#{$prm}blue);
+$green : var(--#{$prm}green);
+$red   : var(--#{$prm}red);
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: larger;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+h4 {
+  font-size: 1.3rem;
+}
+h5 {
+  font-size: 1.35rem;
+}
+h6 {
+  font-size: 1.45rem;
+}
+
+a {
+  border-bottom-width: 2px;
+  border-bottom-style: dotted;
+  border-bottom-color: $blue;
+  color: $blue;
+  text-decoration: none;
+
+  &:visited {
+    border-bottom-color: $red;
+    color: $red;
+  }
+
+  &:hover, &:active {
+    border-bottom-color: $green;
+    border-bottom-style: solid;
+  }
+}

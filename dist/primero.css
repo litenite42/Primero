@@ -1,0 +1,124 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* start of primero */
+:root {
+  --primero-blue: #04b;
+  --primero-green: #0b4;
+  --primero-red: #b40;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: larger;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.35rem;
+}
+
+h6 {
+  font-size: 1.45rem;
+}
+
+a {
+  border-bottom-width: 2px;
+  border-bottom-style: dotted;
+  border-bottom-color: var(--primero-blue);
+  color: var(--primero-blue);
+  text-decoration: none;
+}
+a:visited {
+  border-bottom-color: var(--primero-red);
+  color: var(--primero-red);
+}
+a:hover, a:active {
+  border-bottom-color: var(--primero-green);
+  border-bottom-style: solid;
+}
+
+/*# sourceMappingURL=primero.css.map */
