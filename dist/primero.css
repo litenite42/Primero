@@ -121,4 +121,16 @@ a:hover, a:active {
   border-bottom-style: solid;
 }
 
+.primero-section {
+  display: flex;
+}
+.primero-section.primero-equal > * {
+  flex: 1 0 0;
+}
+.primero-section.primero-half > * {
+  flex: 1 0 0;
+  max-width: 50%;
+  width: 50%;
+}
+
 /*# sourceMappingURL=primero.css.map */
