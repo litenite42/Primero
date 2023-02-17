@@ -81,28 +81,28 @@ th {
   --primero-red: #b40;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: larger;
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
 }
 
 h6 {
   font-size: 1.1rem;
-}
-
-h5 {
-  font-size: 1.2rem;
-}
-
-h4 {
-  font-size: 1.3rem;
-}
-
-h5 {
-  font-size: 1.35rem;
-}
-
-h6 {
-  font-size: 1.45rem;
 }
 
 a {
@@ -123,14 +123,23 @@ a:hover, a:active {
 
 .primero-section {
   display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+.primero-section.reverse {
+  flex-wrap: wrap-reverse;
 }
 .primero-section.primero-equal > * {
   flex: 1 0 0;
 }
 .primero-section.primero-half > * {
-  flex: 1 0 0;
-  max-width: 50%;
-  width: 50%;
+  flex: 50% 0 0;
+}
+.primero-section.primero-third > * {
+  flex: 33% 0 0;
+}
+.primero-section.primero-quarter > * {
+  flex: 25% 0 0;
 }
 
 /*# sourceMappingURL=primero.css.map */

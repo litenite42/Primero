@@ -1,0 +1,23 @@
+@use 'base';
+
+$section : #{base.$prm}section;
+.#{$section} {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .5rem;
+
+  &.reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  @mixin col($pre, $text, $percent) {
+    &.#{$pre}#{$text} > * {
+      flex : $percent 0 0;
+    }
+  }
+
+  @include col(#{base.$prm}, equal, 1);
+  @include col(#{base.$prm}, half, 50%);
+  @include col(#{base.$prm}, third, 33%);
+  @include col(#{base.$prm}, quarter, 25%);
+}

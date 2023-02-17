@@ -15,25 +15,16 @@ $blue  : var(--#{$prm}blue);
 $green : var(--#{$prm}green);
 $red   : var(--#{$prm}red);
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: larger;
+$header_sizes : (1.6,1.45,1.35,1.25,1.15,1.1);
+
+@mixin headers($index) {
+  h#{$index} {
+    font-size: #{nth($header_sizes, $index)}rem;
+  }
 }
 
-h6 {
-  font-size: 1.1rem;
-}
-
-h5 {
-  font-size: 1.2rem;
-}
-h4 {
-  font-size: 1.3rem;
-}
-h5 {
-  font-size: 1.35rem;
-}
-h6 {
-  font-size: 1.45rem;
+@for $ndx from 1 through 6 {
+  @include headers($ndx);
 }
 
 a {
@@ -51,20 +42,5 @@ a {
   &:hover, &:active {
     border-bottom-color: $green;
     border-bottom-style: solid;
-  }
-}
-
-$section : #{$prm}section;
-.#{$section} {
-  display: flex;
-
-  &.#{$prm}equal > * {
-    flex: 1 0 0;
-  }
-
-  &.#{$prm}half > * {
-    flex: 1 0 0;
-    max-width: 50%;
-    width: 50%;
   }
 }
