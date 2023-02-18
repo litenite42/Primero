@@ -13,6 +13,10 @@ $blue  : var(--#{$prm}blue);
 $green : var(--#{$prm}green);
 $red   : var(--#{$prm}red);
 
+$viewport_names : (xs, sm, md, lg);
+$viewport_sizes : (450px, 600px, 800px, 1200px);
+$layouts : (equal, half, third, quarter);
+
 $header_sizes : (1.6,1.45,1.35,1.25,1.15,1.1);
 
 @mixin headers($index) {

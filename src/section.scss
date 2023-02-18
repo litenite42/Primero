@@ -1,23 +1,42 @@
 @use 'base';
-
+/* section.scss */
 $section : #{base.$prm}section;
+
 .#{$section} {
   display: flex;
   flex-wrap: wrap;
   padding: .5rem;
-
+  width: 100%;
+  height: fit-content;
+  
   &.reverse {
     flex-wrap: wrap-reverse;
   }
 
-  @mixin col($pre, $text, $percent) {
-    &.#{$pre}#{$text} > * {
-      flex : $percent 0 0;
+  @mixin col($pre, $texts, $percents) {
+    @for $ndx from 1 through length($texts) {
+      $text : nth($texts, $ndx);
+      $percent : nth($percents, $ndx);
+
+      &.#{$pre}#{$text}>* {
+        flex: $percent 0 0;
+      }
+    }
+  }
+  
+  @include col(#{base.$prm}, base.$layouts, (1, 50%, 33%, 25%));
+  
+  @mixin col_breakpoint($breakpoint, $arr_widths, $minOrMax) {
+    $bp_index : index(base.$viewport_names, $breakpoint);
+    $bp_width : nth(base.$viewport_sizes, $bp_index);
+    
+    @media screen and (#{$minOrMax}-width:$bp_width) {
+      @include col(#{base.$prm}#{$breakpoint}-, base.$layouts, $arr_widths);
     }
   }
 
-  @include col(#{base.$prm}, equal, 1);
-  @include col(#{base.$prm}, half, 50%);
-  @include col(#{base.$prm}, third, 33%);
-  @include col(#{base.$prm}, quarter, 25%);
+  @include col_breakpoint(xs, (100%, 100%, 100%, 100%), max);
+  @include col_breakpoint(sm, (100%, 50%, 50%, 33%), min);
+  @include col_breakpoint(md, (1, 50%, 33%, 33%), min);
+  @include col_breakpoint(lg, (1, 50%, 33%, 25%), min);
 }
