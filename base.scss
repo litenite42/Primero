@@ -1,14 +1,12 @@
 /* start of primero */
 
-@use 'minireset';
-
 $namespace : primero;
 $prm : #{$namespace}-;
 
 :root {
   --#{$prm}blue  : #04b;
   --#{$prm}green : #0b4;
-  --#{$prm}red   : #b40;
+  --#{$prm}red   : #b00;
 }
 
 $blue  : var(--#{$prm}blue);
@@ -21,6 +19,15 @@ $header_sizes : (1.6,1.45,1.35,1.25,1.15,1.1);
   h#{$index} {
     font-size: #{nth($header_sizes, $index)}rem;
   }
+}
+
+@mixin absolutely_everything() {
+  position: absolute;
+        content: ' ';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
 }
 
 @for $ndx from 1 through 6 {

@@ -78,7 +78,7 @@ th {
 :root {
   --primero-blue: #04b;
   --primero-green: #0b4;
-  --primero-red: #b40;
+  --primero-red: #b00;
 }
 
 h1 {
@@ -140,6 +140,55 @@ a:hover, a:active {
 }
 .primero-section.primero-quarter > * {
   flex: 25% 0 0;
+}
+
+:target {
+  background-color: var(--primero-green) !important;
+  color: white !important;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primero-navbar {
+  height: 10vh;
+  max-height: 10vh;
+  padding: 0;
+}
+.primero-navbar > .primero-nav {
+  background-color: var(--primero-red);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.primero-navbar > .primero-nav > * {
+  color: white;
+  text-decoration: none;
+}
+.primero-navbar > .primero-nav > *::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.primero-navbar > .primero-nav.primero-brand {
+  flex: 2 0 0;
+}
+.primero-navbar > .primero-nav:not(.primero-brand):hover, .primero-navbar > .primero-nav:not(.primero-brand):focus, .primero-navbar > .primero-nav:not(.primero-brand).active {
+  background-color: white;
+}
+.primero-navbar > .primero-nav:not(.primero-brand):hover *, .primero-navbar > .primero-nav:not(.primero-brand):focus *, .primero-navbar > .primero-nav:not(.primero-brand).active * {
+  color: var(--primero-blue);
 }
 
 /*# sourceMappingURL=primero.css.map */

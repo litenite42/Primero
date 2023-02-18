@@ -1,0 +1,56 @@
+@use 'base';
+
+$nav : #{base.$prm}nav;
+$navbar : #{$nav}bar;
+$brand : #{base.$prm}brand;
+
+:target {
+  background-color: base.$green !important;
+  color: white !important;
+  @include base.absolutely_everything();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.#{$navbar} {
+  height: 10vh;
+  max-height: 10vh;
+  padding: 0;
+
+  >.#{$nav} {
+    background-color: base.$red;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >* {
+
+      &::before {
+        @include base.absolutely_everything();
+      }
+
+      color: white;
+      text-decoration: none;
+    }
+
+    &.#{$brand} {
+      flex: 2 0 0;
+    }
+
+    &:not(.#{$brand}) {
+
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: white;
+
+        * {
+          color: base.$blue;
+        }
+      }
+    }
+  }
+}
