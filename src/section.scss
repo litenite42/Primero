@@ -8,7 +8,7 @@ $section : #{base.$prm}section;
   padding: .5rem;
   width: 100%;
   height: fit-content;
-  
+
   &.reverse {
     flex-wrap: wrap-reverse;
   }
@@ -36,6 +36,7 @@ $section : #{base.$prm}section;
   }
 
   @include col_breakpoint(xs, (100%, 100%, 100%, 100%), max);
+  @include col_breakpoint(xs, (100%, 100%, 50%, 50%), min);
   @include col_breakpoint(sm, (100%, 50%, 50%, 33%), min);
   @include col_breakpoint(md, (1, 50%, 33%, 33%), min);
   @include col_breakpoint(lg, (1, 50%, 33%, 25%), min);

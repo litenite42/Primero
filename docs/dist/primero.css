@@ -82,6 +82,20 @@ a:hover, a:active {
     flex: 100% 0 0;
   }
 }
+@media screen and (min-width: 450px) {
+  .primero-section.primero-xs-equal > * {
+    flex: 100% 0 0;
+  }
+  .primero-section.primero-xs-half > * {
+    flex: 100% 0 0;
+  }
+  .primero-section.primero-xs-third > * {
+    flex: 50% 0 0;
+  }
+  .primero-section.primero-xs-quarter > * {
+    flex: 50% 0 0;
+  }
+}
 @media screen and (min-width: 600px) {
   .primero-section.primero-sm-equal > * {
     flex: 100% 0 0;
