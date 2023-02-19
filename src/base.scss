@@ -34,6 +34,10 @@ $header_sizes : (1.6, 1.45, 1.35, 1.25, 1.15, 1.1);
   left: 0;
 }
 
+html * {
+  box-sizing: border-box;
+}
+
 @for $ndx from 1 through 6 {
   @include headers($ndx);
 }

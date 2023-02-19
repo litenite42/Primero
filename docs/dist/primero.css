@@ -5,6 +5,10 @@
   --primero-red: #b00;
 }
 
+html * {
+  box-sizing: border-box;
+}
+
 h1 {
   font-size: 1.6rem;
 }
@@ -187,6 +191,13 @@ a:hover, a:active {
 }
 .primero-navbar > .primero-nav:not(.primero-brand):hover *, .primero-navbar > .primero-nav:not(.primero-brand):focus *, .primero-navbar > .primero-nav:not(.primero-brand).active * {
   color: var(--primero-blue);
+}
+
+.primero-pane {
+  margin: 2px;
+  border-radius: 0.2rem;
+  box-shadow: 2px 5px var(--primero-blue);
+  border: 1px solid var(--primero-red);
 }
 
 /*# sourceMappingURL=primero.css.map */
