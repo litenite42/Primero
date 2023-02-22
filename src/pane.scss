@@ -5,6 +5,6 @@ $pane : #{base.$prm}pane;
 .#{$pane} {
     margin: 2px;
     border-radius: 0.2rem;
-    box-shadow:2px 5px base.$blue;
+    box-shadow:1px 2px 2px base.$blue;
     border: 1px solid base.$red;
 }

@@ -56,6 +56,7 @@ a:hover, a:active {
   padding: 0.5rem;
   width: 100%;
   height: fit-content;
+  gap: 1%;
 }
 .primero-section.reverse {
   flex-wrap: wrap-reverse;
@@ -64,13 +65,13 @@ a:hover, a:active {
   flex: 1 0 0;
 }
 .primero-section.primero-half > * {
-  flex: 50% 0 0;
+  flex: 49% 0 0;
 }
 .primero-section.primero-third > * {
-  flex: 33% 0 0;
+  flex: 32% 0 0;
 }
 .primero-section.primero-quarter > * {
-  flex: 25% 0 0;
+  flex: 24% 0 0;
 }
 @media screen and (max-width: 450px) {
   .primero-section.primero-xs-equal > * {
@@ -94,10 +95,10 @@ a:hover, a:active {
     flex: 100% 0 0;
   }
   .primero-section.primero-xs-third > * {
-    flex: 50% 0 0;
+    flex: 49% 0 0;
   }
   .primero-section.primero-xs-quarter > * {
-    flex: 50% 0 0;
+    flex: 49% 0 0;
   }
 }
 @media screen and (min-width: 600px) {
@@ -105,13 +106,13 @@ a:hover, a:active {
     flex: 100% 0 0;
   }
   .primero-section.primero-sm-half > * {
-    flex: 50% 0 0;
+    flex: 49% 0 0;
   }
   .primero-section.primero-sm-third > * {
-    flex: 50% 0 0;
+    flex: 49% 0 0;
   }
   .primero-section.primero-sm-quarter > * {
-    flex: 33% 0 0;
+    flex: 31% 0 0;
   }
 }
 @media screen and (min-width: 800px) {
@@ -119,13 +120,13 @@ a:hover, a:active {
     flex: 1 0 0;
   }
   .primero-section.primero-md-half > * {
-    flex: 50% 0 0;
+    flex: 49% 0 0;
   }
   .primero-section.primero-md-third > * {
-    flex: 33% 0 0;
+    flex: 32% 0 0;
   }
   .primero-section.primero-md-quarter > * {
-    flex: 33% 0 0;
+    flex: 32% 0 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -133,13 +134,13 @@ a:hover, a:active {
     flex: 1 0 0;
   }
   .primero-section.primero-lg-half > * {
-    flex: 50% 0 0;
+    flex: 49% 0 0;
   }
   .primero-section.primero-lg-third > * {
-    flex: 33% 0 0;
+    flex: 32% 0 0;
   }
   .primero-section.primero-lg-quarter > * {
-    flex: 25% 0 0;
+    flex: 24% 0 0;
   }
 }
 
@@ -162,6 +163,7 @@ a:hover, a:active {
   height: 10vh;
   max-height: 10vh;
   padding: 0;
+  gap: unset;
 }
 .primero-navbar > .primero-nav {
   background-color: var(--primero-red);
@@ -196,7 +198,7 @@ a:hover, a:active {
 .primero-pane {
   margin: 2px;
   border-radius: 0.2rem;
-  box-shadow: 2px 5px var(--primero-blue);
+  box-shadow: 1px 2px 2px var(--primero-blue);
   border: 1px solid var(--primero-red);
 }
 

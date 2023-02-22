@@ -17,6 +17,7 @@ $brand : #{base.$prm}brand;
   height: 10vh;
   max-height: 10vh;
   padding: 0;
+  gap: unset;
 
   >.#{$nav} {
     background-color: base.$red;
